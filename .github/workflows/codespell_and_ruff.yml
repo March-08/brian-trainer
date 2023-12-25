@@ -4,11 +4,11 @@
 # https://github.com/codespell-project/codespell#readme
 # https://docs.astral.sh/ruff/
 name: codespell_and_ruff
-on: [push, pull_request]
-  # push:
-  #  branches: [main]
-  # pull_request:
-  #  branches: [main]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 jobs:
   codespell_and_ruff:
     runs-on: ubuntu-latest
