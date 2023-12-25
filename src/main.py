@@ -1,8 +1,8 @@
-from typing import Union
-from pydantic import BaseModel
 from fastapi import FastAPI
-from src.model.chain import chain
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+
+from src.model.chain import chain
 
 app = FastAPI()
 

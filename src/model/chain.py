@@ -1,9 +1,6 @@
-from langchain.chat_models import ChatOpenAI
-from langchain import HuggingFaceHub
-from kor.extraction import create_extraction_chain
-from kor.nodes import Object, Text
-from kor import create_extraction_chain
 from dotenv import load_dotenv
+from kor import create_extraction_chain, Object, Text
+from langchain import HuggingFaceHub
 
 load_dotenv()
 
@@ -54,7 +51,7 @@ schema = Object(
         (
             "I want to know the AAVE balance of 0xFe8e15ae884524eFfc2fe91dF6f5BA40D8533A92 on Gnosis",
             [
-                {"action": "balance", "adddress": "0xFe8e15ae884524eFfc2fe91dF6f5BA40D8533A92", "chain": "Gnosis", "token":"AAVE"},
+                {"action": "balance", "address": "0xFe8e15ae884524eFfc2fe91dF6f5BA40D8533A92", "chain": "Gnosis", "token": "AAVE"},
             ],
         )
     ],
